@@ -31,11 +31,5 @@ def make_qrcode():
     print('Done.')
 
 
-def getRealTime():
-    print('Getting real time')
-    now = datetime.now()
-    dt_string = now.strftime('%d%m%Y%H%M%S.png')
-    return dt_string
-
 
 make_qrcode()
