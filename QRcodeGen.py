@@ -13,14 +13,21 @@ def make_qrcode():
 
     url = input("Entrez l'URL voulu : ")
 
+    f_color = input("Enter fill color (e.g., black, white, or #0F4B30): ").strip()
+    b_color = input("Enter back color (e.g., white, transparent, or #FFFFFF): ").strip()
+
+    filename = input("Enter filename : ").strip()
+    filename = filename + ".png"
+
     print("Création du QR code pour l'URL " + url)
 
     qr.add_data(url)
     qr.make(fit=True)
 
     #img = qr.make_image(fill_color="black", back_color="transparent")
-    img = qr.make_image(fill_color="white", back_color="transparent")
-    img.save('QRCode_.png')
+    img = qr.make_image(fill_color=f_color, back_color=b_color)
+
+    img.save(filename)
     print('Done.')
 
 
