@@ -2,6 +2,6 @@
 Very simple QR code Generator in python.
 
 # Use
-´´´bash
+```bash
 pip install -r requirements.txt
-´´´
+```
